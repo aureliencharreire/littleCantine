@@ -1,0 +1,114 @@
+
+<!-- Main container -->
+<div class="page-container">
+<!-- Navigation Bloc --><div id="b-nav" class="bloc-container">
+	<div id="bloc-nav" class="d-mode">
+		<div class="bloc bgc-dark-jungle-green d-bloc sticky-nav" id="nav-bloc">
+			<div class="container">
+				<nav class="navbar row">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="index.html"></a>
+						<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+							<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse navbar-1">
+						<ul class="site-navigation nav navbar-nav">
+							<li>
+								<a id="pl-undefined" href="#">presse</a>
+							</li>
+                            <% if user_signed_in? %>
+                            <li>
+                                <a <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> > </a>
+                            </li>
+                            <% end %>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div><!-- Navigation Bloc END --><!-- bloc-9 --><div class="bloc l-bloc bgc-white" id="bloc-9">
+	<div class="container bloc-md">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1 class="mg-sm">
+					Bienvenue sur l&rsquo;Admin Dashboard
+				</h1>
+				<p>
+					Ici vous pouvez administerer votre site internet, gérer vos contact, vos commande et ajouter des news.
+				</p>
+				<div class="divider-h">
+					<span class="divider"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- bloc-9 END --><!-- bloc-10 --><div class="bloc l-bloc bgc-white" id="bloc-10">
+	<div class="container bloc-md">
+		<div class="row">
+			<div class="col-sm-4">
+				<a href="/articles.html" class="btn  btn-lg btn-pale-gold btn-block btn-sq">Presse</a>
+                <a href="/contacts.html" class="btn  btn-lg btn-pale-gold btn-block btn-sq">Gestion des contacts</a>
+				<div class="divider-h">
+					<span class="divider"></span>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<a href="menus.html" class="btn  btn-lg btn-pale-gold btn-block btn-sq">Menus</a>
+                <a href="index.html" class="btn  btn-lg btn-pale-gold btn-block btn-sq">Gestions des reservations</a>
+                <a href="index.html" class="btn  btn-lg btn-pale-gold btn-block btn-sq">Team</a>
+			</div>
+			<div class="col-sm-4">
+				<a href="index.html" class="btn  btn-lg btn-pale-gold btn-block btn-sq">News</a><a href="index.html" class="btn  btn-lg btn-pale-gold btn-block btn-sq">Gestions des commandes</a>
+				<div class="divider-h">
+					<span class="divider"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- bloc-10 END --><!-- Footer - bloc-11 --><div class="bloc bgc-dark-jungle-green d-bloc" id="bloc-11">
+	<div class="container bloc-sm">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-4">
+						<h4 class="mg-md">
+							Litlle cantine
+						</h4>
+						<h5 class="mg-md">
+							51 rue des écoles
+						</h5>
+						<h5 class="mg-md">
+							01 45 56 69 90
+						</h5>
+					</div>
+					<div class="col-sm-4">
+						<h5 class="mg-md">
+							Du lundi au vendredi de 11h à 23h
+						</h5>
+						<h5 class="mg-md">
+							Les sameid et dimache de XX à XX
+						</h5>
+					</div>
+					<div class="col-sm-4">
+						<h5 class="mg-md text-left">
+							Instagram
+						</h5>
+						<h5 class="mg-md">
+							Facebook
+						</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- Footer - bloc-11 END -->
+</div>
+<!-- Main container END -->
+
+</body>
+
+<!-- Google Analytics -->
+
+<!-- Google Analytics END -->

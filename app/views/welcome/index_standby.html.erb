@@ -1,0 +1,23 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+
+<h2>Besoin d'information ?</h2>
+
+  <%= form_tag(controller: "contacts", action: "create", method: "post", class: "nifty_form") do %>
+
+        <div class="contact-info-group">
+
+        <span> Your Mail </span>
+        <%= text_field_tag 'contact[email]'%></label>
+
+        </div>
+
+        <label><span> Question </span>
+        <%= text_area_tag 'contact[message]'%></label>
+
+        <div class="submit-wrap">
+    <%= submit_tag "Envoyer" %>
+        </div>
+
+  <% end %>

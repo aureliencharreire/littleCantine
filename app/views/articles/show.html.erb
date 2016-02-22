@@ -1,0 +1,137 @@
+
+<p>
+  <strong>Link:</strong>
+  <%= @article.link %>
+</p>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
+
+
+<div class="page-container">
+
+<!-- Navigation Bloc -->
+<div id="b-nav" class="bloc-container">
+	<div id="bloc-nav" class="d-mode">
+		<div class="bloc bgc-dark-jungle-green d-bloc sticky-nav" id="nav-bloc">
+			<div class="container">
+				<nav class="navbar row">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="index.html"></a>
+						<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+							<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse navbar-1">
+						<ul class="site-navigation nav navbar-nav">
+							<li>
+								<a id="pl-undefined" href="#">presse</a>
+							</li>
+							<li>
+								<a href="#">admin_presse</a>
+							</li>
+							<li>
+								<a href="#">new_article</a>
+							</li>
+							<li>
+								<a href="#">Show_article</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Navigation Bloc END -->
+
+<!-- bloc-15 -->
+<div class="bloc l-bloc bgc-white" id="bloc-15">
+	<div class="container bloc-sm">
+		<div class="row voffset-md">
+			<div class="col-sm-8 col-sm-12">
+				<h1 class="mg-sm">
+					Administration Presse
+				</h1>
+				<div class="divider-h">
+					<span class="divider"></span>
+				</div>
+				<h3 class="mg-md text-left">
+					Details - <%= @article.title %>
+				</h3>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-15 END -->
+
+<!-- bloc-16 -->
+<div class="bloc l-bloc bgc-white tc-outer-space" id="bloc-16">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-6">
+						<h3 class="mg-md">
+							<%= @article.title %>
+						</h3>
+						<h4 class="mg-md">
+                            <%= @article.subtitle %>
+						</h4>
+						<p>
+                            <%= @article.description %>
+                        </p><a <%= link_to "Lire l'article", @article.link, class:"a-btn a-block" %> </a>
+					</div>
+					<div class="col-sm-6">
+						<img src="img/placeholder-image.png" class="img-responsive" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-16 END -->
+
+<!-- Footer - bloc-17 -->
+<div class="bloc bgc-dark-jungle-green d-bloc" id="bloc-17">
+	<div class="container bloc-sm">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-4">
+						<h4 class="mg-md">
+							Litlle cantine
+						</h4>
+						<h5 class="mg-md">
+							51 rue des écoles
+						</h5>
+						<h5 class="mg-md">
+							01 45 56 69 90
+						</h5>
+					</div>
+					<div class="col-sm-4">
+						<h5 class="mg-md">
+							Du lundi au vendredi de 11h à 23h
+						</h5>
+						<h5 class="mg-md">
+							Les sameid et dimache de XX à XX
+						</h5>
+					</div>
+					<div class="col-sm-4">
+						<h5 class="mg-md text-left">
+							Instagram
+						</h5>
+						<h5 class="mg-md">
+							Facebook
+						</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Footer - bloc-17 END -->
+</div>
+<!-- Main container END -->
+
+</body>

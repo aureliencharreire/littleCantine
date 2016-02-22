@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <title>Little</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+  <!-- CSS -->
+
+  <%= stylesheet_link_tag "bootstrap.css" %>
+  <%= stylesheet_link_tag "style" %>
+  <%= stylesheet_link_tag "animate" %>
+  <%= stylesheet_link_tag "font-awesome.min" %>
+
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-2.2.0.js></script>
+  <%= javascript_include_tag "bootstrap" %>
+  <%= javascript_include_tag "blocs" %>
+  <%= javascript_include_tag "jqBootstrapValidation" %>
+  <%= javascript_include_tag "formHandler" %>
+
+
+
+</head>
+<body>
+
+<%= flash.each do |name, msg| %>
+    <%= content_tag(:div, msg, class: "alert alert-info") %>
+<% end %>
+
+
+<%= yield %>
+
+</body>
+</html>

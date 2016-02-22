@@ -1,0 +1,17 @@
+<h1>Welcome to admin dash board</h1>
+
+<div class="row">
+
+<h2> Menus management </h2>
+<br>
+        <h3>Ajouter un plat à la carte </h3>
+        <%= form_tag(controller: "menus", action: "create", method: "post", class: "nifty_form") do %>
+            <%= collection_select(:menu, :category_id, Category.all, :id, :name) %>
+            <%= text_field_tag 'menu[title]',  "Nom du plats"%>
+            <%= text_area_tag 'menu[description]', "Description"%>
+            <%= text_field_tag 'menu[price]', "Prix"%>
+            <%= submit_tag "Ajouter" %>
+        <% end %>
+</div>
+
+</div>
