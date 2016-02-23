@@ -8,6 +8,11 @@ class MenusController < ApplicationController
     @menus = Menu.all
   end
 
+
+  def carte
+    @menus = Menu.all
+  end
+
   # GET /menus/1
   # GET /menus/1.json
   def show
@@ -75,6 +80,6 @@ class MenusController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def menu_params
-      params.require(:menu).permit(:title, :description, :price, :category_id)
+      params.require(:menu).permit(:title, :description, :price, :category_id, :burger_month)
     end
 end

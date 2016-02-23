@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   # Example of regular route:
   get '/admin' => 'admin#admin_dashboard'
   get '/presse' => 'articles#presse'
+  get '/carte' => 'menus#carte'
+
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

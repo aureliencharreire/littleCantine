@@ -80,10 +80,11 @@
 						</h4>
 						<p>
                             <%= @article.description %>
-                        </p><a <%= link_to "Lire l'article", @article.link, class:"a-btn a-block" %> </a>
+                        </p>
+                        <a <%= link_to "Lire l'article", @article.link, class:"a-btn a-block" %> </a>
 					</div>
 					<div class="col-sm-6">
-						<img src="img/placeholder-image.png" class="img-responsive" />
+                        <%= image_tag @article.couv_article.url class:"img-responsive" %>
 					</div>
 				</div>
 			</div>

@@ -1,34 +1,61 @@
-<%= form_for(@menu) do |f| %>
-  <% if @menu.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
+<!-- bloc-22 -->
+<div class="bloc l-bloc bgc-white tc-outer-space" id="bloc-22">
+	<div class="container">
+		<div class="row">
+            <%= form_for(@menu) do |f| %>
+              <% if @menu.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
 
-      <ul>
-      <% @menu.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+                  <ul>
+                  <% @menu.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
 
-  <div class="field">
-    <%= f.label :category %><br>
-    <%= f.collection_select :category_id, Category.all, :id, :name %>
- </div>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+			<div class="col-xs-12 col-md-8 col-md-offset-2">
+				<form id="form-2" novalidate>
+					<div class="form-group">
+						<label class="mg-sm">
+							Nom du plat
+						</label>
+                        <%= f.text_field :title, id:"name", class:"form-control"  %>
+					</div>
+					<div class="form-group">
+						<label>
+							Catégorie du plat
+						</label>
+                        <%= f.collection_select :category_id, Category.all, :id, :name, class:"form-control" %>
+					</div>
+					<div class="form-group">
+						<label>
+							Prix
+						</label>
+                        <%= f.number_field :price, class:"form-control" %>
+					</div>
+					<div class="form-group">
+						<label>
+							Description
+						</label>
+                        <%= f.text_area :description,  class:"form-control", rows:4, cols:50 %>
+					</div>
+					<div class="checkbox">
+						<label>
+                            <%= f.label :burger_month %>
+						</label>
+                        <%= f.select :burger_month, [['Oui', true], ['Non', false]] %>
+					</div>
+                    <%= f.submit "ajuter le plat", class:"bloc-button btn btn-lg btn-block btn-sq btn-pale-gold"  %>
+					</button>
+					<div class="divider-h">
+						<span class="divider"></span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 <% end %>
+<!-- bloc-22 END -->

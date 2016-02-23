@@ -75,12 +75,11 @@ class ArticlesController < ApplicationController
 
     def set_articles
         @articles = Article.all
-
     end
 
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :subtitle, :description, :link)
+      params.require(:article).permit(:title, :subtitle, :description, :link, :couv_article)
     end
 end

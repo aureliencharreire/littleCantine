@@ -13,19 +13,20 @@
     <script src="./js/jquery-2.1.0.min.js"></script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/blocs.js"></script>
-
-    <title>admin presse - </title>
+    <script src='./js/jqBootstrapValidation.js'></script>
+	<script src='./js/formHandler.js'></script>
+    <title>new article - </title>
 </head>
 <body>
 <!-- Main container -->
 <div class="page-container">
-<!-- Navigation Bloc --><div id="b-nav" class="bloc-container">
+    <!-- Navigation Bloc --><div id="b-nav" class="bloc-container">
 	<div id="bloc-nav" class="d-mode d-mode-active">
 		<div class="bloc bgc-dark-jungle-green d-bloc sticky-nav" id="nav-bloc">
 			<div class="container">
 				<nav class="navbar row">
 					<div class="navbar-header">
-						<a class="navbar-brand" href="index.html"></a>
+						<a class="navbar-brand" href="index.html"></a> 
 						<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
 							<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 						</button>
@@ -59,10 +60,10 @@
 			</div>
 		</div>
 	</div>
-</div><!-- Navigation Bloc END --><!-- bloc-11 --><div class="bloc l-bloc bgc-white" id="bloc-11">
-	<div class="container bloc-md">
+</div><!-- Navigation Bloc END --><!-- bloc-13 --><div class="bloc l-bloc bgc-white" id="bloc-13">
+	<div class="container bloc-sm">
 		<div class="row voffset-md">
-			<div class="col-sm-8">
+			<div class="col-sm-8 col-sm-12">
 				<h1 class="mg-sm">
 					Administration Presse
 				</h1>
@@ -70,36 +71,53 @@
 					<span class="divider"></span>
 				</div>
 				<h3 class="mg-md text-left">
-					liste des articles
+					Ajouter un article
 				</h3>
 			</div>
-			<div class="col-sm-4">
-                <%= link_to 'Ajouter un article', new_article_path, class: "btn btn-lg btn-sq btn-block btn-pale-gold" %>
-			</div>
 		</div>
 	</div>
-</div><!-- bloc-11 END --><!-- bloc-12 --><div class="bloc l-bloc bgc-white" id="bloc-12">
-	<div class="container bloc-sm">
-        <% @articles.each do |article| %>
+</div><!-- bloc-13 END --><!-- bloc-14 --><div class="bloc l-bloc bgc-white tc-outer-space" id="bloc-14">
+	<div class="container">
 		<div class="row">
-			<div class="col-sm-3">
-				<h4 class="mg-md text-center">
-					<%= article.title %>
-				</h4>
-			</div>
-			<div class="col-sm-3">
-				 <%= link_to 'Détails', article, class:"btn  btn-outer-space btn-block btn-sq"  %>
-			</div>
-			<div class="col-sm-3">
-				<%= link_to 'Modifier', edit_article_path(article), class:"btn btn-clean  btn-sq btn-outer-space btn-block" %>
-			</div>
-			<div class="col-sm-3">
-				<%= link_to 'Supprimer', article, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn  btn-sq btn-block btn-rose-gold" %>
+			<div class="col-xs-12 col-md-8 col-md-offset-2">
+				<form id="form-2" novalidate>
+					<div class="form-group">
+						<label class="mg-sm">
+							Titre de l'article
+						</label>
+						<input id="name" class="form-control" required />
+					</div>
+					<div class="form-group">
+						<label>
+							Sous titre
+						</label>
+						<input class="form-control" />
+					</div>
+					<div class="form-group">
+						<label>
+							Lien de l'article
+						</label>
+						<input id="email" class="form-control" type="email" required />
+					</div>
+					<div class="form-group">
+						<label>
+							Message
+						</label><textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
+					</div> <a href="index.html" class="btn  btn-lg btn-block btn-sq wire-btn-outer-space btn-wire">Ajouter une image</a>
+					<button class="bloc-button btn btn-lg btn-block btn-sq btn-pale-gold" type="submit">
+						Publier l'article
+					</button>
+					<div class="divider-h">
+						<span class="divider"></span>
+					</div>
+					<div class="divider-h">
+						<span class="divider"></span>
+					</div>
+				</form>
 			</div>
 		</div>
-        <% end %>
 	</div>
-</div><!-- bloc-12 END --><!-- Footer - bloc-27 --><div class="bloc bgc-dark-jungle-green d-bloc" id="bloc-27">
+</div><!-- bloc-14 END --><!-- Footer - bloc-27 --><div class="bloc bgc-dark-jungle-green d-bloc" id="bloc-27">
 	<div class="container bloc-sm">
 		<div class="row">
 			<div class="col-sm-12">
@@ -140,7 +158,7 @@
 <!-- Main container END -->
 
 </body>
-
+    
 <!-- Google Analytics -->
 
 <!-- Google Analytics END -->

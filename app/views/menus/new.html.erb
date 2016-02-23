@@ -1,5 +1,67 @@
-<h1>New Menu</h1>
 
+<!-- Navigation Bloc -->
+<div id="b-nav" class="bloc-container">
+<div id="bloc-nav" class="d-mode d-mode-active">
+    <div class="bloc bgc-dark-jungle-green d-bloc sticky-nav" id="nav-bloc">
+        <div class="container">
+            <nav class="navbar row">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"></a>
+                    <button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+                        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-1">
+                    <ul class="site-navigation nav navbar-nav">
+                        <li>
+                            <a id="pl-undefined" href="#">presse</a>
+                        </li>
+                        <li>
+                            <a href="admin-presse.html">admin_presse</a>
+                        </li>
+                        <li>
+                            <a href="new-article.html">new_article</a>
+                        </li>
+                        <li>
+                            <a href="show-article.html">Show_article</a>
+                        </li>
+                        <li>
+                            <a href="lacarte.html">LaCarte</a>
+                        </li>
+                        <li>
+                            <a href="new-menu.html">New_menu</a>
+                        </li>
+                        <li>
+                            <a href="admin-menus.html">Admin_menus</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Navigation Bloc END -->
+
+<!-- bloc-21 -->
+<div class="bloc l-bloc bgc-white" id="bloc-21">
+<div class="container bloc-sm">
+    <div class="row voffset-md">
+        <div class="col-sm-8 col-sm-12">
+            <h1 class="mg-sm">
+                Administration Carte
+            </h1>
+            <div class="divider-h">
+                <span class="divider"></span>
+            </div>
+            <h3 class="mg-md text-left">
+                Ajouter un plat / boisson à la carte
+            </h3>
+        </div>
+    </div>
+</div>
+</div>
+<!-- bloc-21 END -->
 <%= render 'form' %>
 
 <%= link_to 'Back', menus_path %>
